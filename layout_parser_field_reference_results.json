@@ -1,0 +1,350 @@
+{
+  "timestamp": "2026-02-09",
+  "processor": "Layout Parser v1beta3 - Coordinate Extraction Optimized",
+  "api_version": "documentai_v1beta3",
+  "field_reference_strategy": {
+    "primary_coordinate_source": "document.pages[].blocks[].layout.bounding_poly",
+    "image_data_source": "document.pages[].image",
+    "visual_elements_source": "document.pages[].visual_elements",
+    "text_mapping_source": "layout.text_anchor.text_segments"
+  },
+  "advanced_options": {
+    "chunkingConfig": {
+      "enabled": true,
+      "chunk_size": 500,
+      "include_ancestor_headings": true
+    },
+    "returnImages": true,
+    "returnBoundingBoxes": true,
+    "enableImageAnnotation": true,
+    "enableImageExtraction": true,
+    "enableTableAnnotation": true,
+    "enableLlmLayoutParsing": false
+  },
+  "document_analysis": {
+    "has_text": false,
+    "text_length": 0,
+    "has_pages": true,
+    "pages_count": 1,
+    "has_document_layout": true,
+    "blocks_count": 2,
+    "has_chunked_document": true,
+    "chunks_count": 4,
+    "has_images": false,
+    "images_count": 0
+  },
+  "blocks_detail": [
+    {
+      "block_id": 1,
+      "has_text_block": true,
+      "text": "2）アラン・ハンセン社の自信 ヤコブセンが生前に発表したデザインの中でも、われわれのよくなる製品は決して多くない。スワンやエッグの優位性は、そのデザインの斬新さやユニークさのデザインのみならず、当時、家具メーカーのフリッツ・ハンセン社の製品のなかでも、きわめてモダンな製品だったため、フリッツ・ハンセン社にとっても技術的にチャレンジングなものだった。 3）家具職人マイスターではなかった ヤコブセンが生涯で手がけたデザインの中で、もっとも有名な椅子のひとつ、セブンチェアは家具職人マイスターのつくる椅子にも似ていますが、木材に対しての深い造詣や素材についての知識があったからこそ誕生したデザインではない。 建築素材と同じレベルで木をデザインにいかしていることはあまりなかった。デザインのディテールに使ったり、色みをつけたり、あるいは表面材として用いるなどの使い方がほとんどである。ヤコブセンは、建築家でありデザイナーだった。木を自在にあやつる職人ではなかった。そのことが逆に、スワンやエッグのような、それまでの椅子にはなかった新しいデザインの可能性をひらくきっかけとなった。 （右） エッグチェア SASロイヤルホテルのために、スワンチェアと同時にデザインされた。卵の殻に似たフォルムは、体をすっぽりと包み、プライベートな空間をつくりだす。 （右） セブンチェア 1955年に発表。積層合板を三次元成形した最初の椅子。ヤコブセンのデザインの中でもっとも商業的に成功し、現在でも、フリッツ・ハンセン社のベストセラー。 （左） アリンコチェア 1952年に発表。「セブンチェア」の原型。デンマークの製薬会社、ノボ・ノルディスク社の社員食堂のためにデザインされた。当初は、家具メーカーのフリッツ・ハンセン社から、その急進的なデザインと製造の難しさから製品されるかどうかが危ぶまれたが、現在も製造されている。 なぜ、ヤコブセンはアントチェアやセブンチェアのような合板を使った椅子を生んだのか 家具素材の刷新と模索 アントチェア（1952年）は、成形合板が家具の世界で初めて採用した事例としてしばしば挙げられる。それまで、家具の素材といえば、無垢材や椅子張りなどが中心だったが、20世紀になってさまざまな素材が登場してきた。金属や新建材が台頭してきたことで、家具のデザインは飛躍てきにひろがった。 （右） スワンチェア 1958年に、コペンハーゲンのSASロイヤルホテルのためにエッグチェアとともに設計された。白鳥が羽を広げたような優美なフォルムと、直線を使わないデザインが特徴。フレームはシェル（硬質発泡ウレタン製）に、脚部はアルミのスターベースで構成される。 偉大な建築家を語る アルネ・ヤコブセン 1902～1971年 デンマークの建築家、家具デザイナー。1902年2月11日、コペンハーゲン生まれ。1924年にデンマーク王立芸術アカデミーに入学したが、その前に一度、石工職人としての教育を受けている。そのため、もとからの才能に、アカデミズムの洗練されたアートの感覚と実践的な技術者の視点がくわわった。1927～1930年、同大学建築学部で、カイ・フィスカーとカイ・ゴットロープのもとで学んだ。 アカデミーに入学する前、1925年のパリ万博（アール・デコ博）において、椅子を発表。銀メダルを獲得。この万博で、ル・コルビュジエやミース・ファン・デル・ローエの作品に注目。合理主義、モダニズムの建築に開眼する。 卒業後、市庁舎や劇場、オフィスビル、集合住宅など数々の建築設計に携わるかたわら、家具や照明、テキスタイルなどのデザインをてがけ、トータルデザインを実践。当時、流行のデンマークモダニズムを追求したほかの建築家とは異なり、早くから、インターナショナルなモダニズム建築に目を向けていた。1952年、背と座が一体となった成形合板の「アリンコチェア」を発表。 建築では「SASロイヤルホテル・コペンハーゲン」（現ラディソンSASロイヤルホテル、1960年）がもっとも有名。「スワンチェア」、「エッグチェア」（1958年）、「AJランプ」など、トータルに手がけた。1964年には、オックスフォード大学セント・キャサリンズ・カレッジを設計。家具やカトラリーなど、ホテルのインテリアパーツを設計する。ミッドセンチュリー期のデンマークを代表する世界的建築家のひとりである。1971年3月24日、心臓発作により死去。69歳だった。彼のスタジオは、ハンス・J・ウェグナーのスタジオで働いていたこともある。彼の右腕として活躍したテオドア・スコフとビゴ・ボーセンが引き継ぎ、代表作のデンマーク国立銀行の設計を完成させた。 (上) ヤコブセンの自邸であるスーホルムの集合住宅。このデザインはあまり知られていないが、1950年に設計されたもの。 233 20世紀の建築家たちの仕事",
+      "text_length": 2027,
+      "bounding_box": null
+    },
+    {
+      "block_id": 2,
+      "has_text_block": false,
+      "text": "",
+      "text_length": 0,
+      "bounding_box": {
+        "normalized_vertices": [
+          {
+            "x": 0.12694409489631653,
+            "y": 0.08479619026184082
+          },
+          {
+            "x": 0.12694409489631653,
+            "y": 0.4656352400779724
+          },
+          {
+            "x": 0.883144199848175,
+            "y": 0.4656352400779724
+          },
+          {
+            "x": 0.883144199848175,
+            "y": 0.08479619026184082
+          }
+        ]
+      }
+    }
+  ],
+  "chunks_detail": [
+    {
+      "chunk_id": 1,
+      "content": "This is a text-based image, specifically a page from a book or magazine written in Japanese. The content focuses on the Danish architect and furniture designer, Arne Jacobsen, and his iconic chairs. The page number is 129.\n\n**Visual Description:**\nThe page is laid out in two columns of Japanese text. It features:\n*   A small, black-and-white sketched portrait of a man with glasses, identified as Arne Jacobsen.\n*   Four professional-looking, black-and-white sketches of famous chairs:\n    *   **Ant Chair (15-13):** A chair with a distinctive, insect-like silhouette, a narrow \"waist,\" and thin metal legs.\n    *   **Series 7 (or Seven) Chair (15-14):** Similar in form to the Ant Chair but with a wider seat and back.\n    *   **Egg Chair (15-15):** A large, high-backed armchair with a curved, enveloping shape resembling an eggshell, mounted on a four-star base.\n    *   **Swan Chair (15-16):** A lower-backed armchair with flowing, organic curves reminiscent of a swan, also mounted on a four-star base.\n\nEach chair illustration is accompanied by a caption explaining its design and history. The main body of the text provides a biography of Jacobsen and analyzes the reasons behind his success in creating these famous chairs.\n\n**Facts and Conclusions from the Image:**",
+      "content_length": 1276,
+      "page_headers_count": 1,
+      "page_headers": [
+        "text: \"2）アラン・ハンセン社の自信 ヤコブセンが生前に発表したデザインの中でも、われわれのよくなる製品は決して多くない。スワンやエッグの優位性は、そのデザインの斬新さやユニークさのデザインのみならず、当時、家具メーカーのフリッツ・ハンセン社の製品のなかでも、きわめてモダンな製品だったため、フリッツ・ハンセン社にとっても技術的にチャレンジングなものだった。 3）家具職人マイスターではなかった ヤコブセンが生涯で手がけたデザインの中で、もっとも有名な椅子のひとつ、セブンチェアは家具職人マイスターのつくる椅子にも似ていますが、木材に対しての深い造詣や素材についての知識があったからこそ誕生したデザインではない。 建築素材と同じレベルで木をデザインにいかしていることはあまりなかった。デザインのディテールに使ったり、色みをつけたり、あるいは表面材として用いるなどの使い方がほとんどである。ヤコブセンは、建築家でありデザイナーだった。木を自在にあやつる職人ではなかった。そのことが逆に、スワンやエッグのような、それまでの椅子にはなかった新しいデザインの可能性をひらくきっかけとなった。 （右） エッグチェア SASロイヤルホテルのために、スワンチェアと同時にデザインされた。卵の殻に似たフォルムは、体をすっぽりと包み、プライベートな空間をつくりだす。 （右） セブンチェア 1955年に発表。積層合板を三次元成形した最初の椅子。ヤコブセンのデザインの中でもっとも商業的に成功し、現在でも、フリッツ・ハンセン社のベストセラー。 （左） アリンコチェア 1952年に発表。「セブンチェア」の原型。デンマークの製薬会社、ノボ・ノルディスク社の社員食堂のためにデザインされた。当初は、家具メーカーのフリッツ・ハンセン社から、その急進的なデザインと製造の難しさから製品されるかどうかが危ぶまれたが、現在も製造されている。 なぜ、ヤコブセンはアントチェアやセブンチェアのような合板を使った椅子を生んだのか 家具素材の刷新と模索 アントチェア（1952年）は、成形合板が家具の世界で初めて採用した事例としてしばしば挙げられる。それまで、家具の素材といえば、無垢材や椅子張りなどが中心だったが、20世紀になってさまざまな素材が登場してきた。金属や新建材が台頭してきたことで、家具のデザインは飛躍てきにひろがった。 （右） スワンチェア 1958年に、コペンハーゲンのSASロイヤルホテルのためにエッグチェアとともに設計された。白鳥が羽を広げたような優美なフォルムと、直線を使わないデザインが特徴。フレームはシェル（硬質発泡ウレタン製）に、脚部はアルミのスターベースで構成される。 偉大な建築家を語る アルネ・ヤコブセン 1902～1971年 デンマークの建築家、家具デザイナー。1902年2月11日、コペンハーゲン生まれ。1924年にデンマーク王立芸術アカデミーに入学したが、その前に一度、石工職人としての教育を受けている。そのため、もとからの才能に、アカデミズムの洗練されたアートの感覚と実践的な技術者の視点がくわわった。1927～1930年、同大学建築学部で、カイ・フィスカーとカイ・ゴットロープのもとで学んだ。 アカデミーに入学する前、1925年のパリ万博（アール・デコ博）において、椅子を発表。銀メダルを獲得。この万博で、ル・コルビュジエやミース・ファン・デル・ローエの作品に注目。合理主義、モダニズムの建築に開眼する。 卒業後、市庁舎や劇場、オフィスビル、集合住宅など数々の建築設計に携わるかたわら、家具や照明、テキスタイルなどのデザインをてがけ、トータルデザインを実践。当時、流行のデンマークモダニズムを追求したほかの建築家とは異なり、早くから、インターナショナルなモダニズム建築に目を向けていた。1952年、背と座が一体となった成形合板の「アリンコチェア」を発表。 建築では「SASロイヤルホテル・コペンハーゲン」（現ラディソンSASロイヤルホテル、1960年）がもっとも有名。「スワンチェア」、「エッグチェア」（1958年）、「AJランプ」など、トータルに手がけた。1964年には、オックスフォード大学セント・キャサリンズ・カレッジを設計。家具やカトラリーなど、ホテルのインテリアパーツを設計する。ミッドセンチュリー期のデンマークを代表する世界的建築家のひとりである。1971年3月24日、心臓発作により死去。69歳だった。彼のスタジオは、ハンス・J・ウェグナーのスタジオで働いていたこともある。彼の右腕として活躍したテオドア・スコフとビゴ・ボーセンが引き継ぎ、代表作のデンマーク国立銀行の設計を完成させた。 (上) ヤコブセンの自邸であるスーホルムの集合住宅。このデザインはあまり知られていないが、1950年に設計されたもの。 233 20世紀の建築家たちの仕事\"\npage_span {\n  page_start: 1\n  page_end: 1\n}\n"
+      ],
+      "source_blocks": [
+        {
+          "source_block_id": "2"
+        }
+      ],
+      "element_bounding_boxes": [],
+      "preview": "This is a text-based image, specifically a page from a book or magazine written in Japanese. The content focuses on the Danish architect and furniture designer, Arne Jacobsen, and his iconic chairs. T..."
+    },
+    {
+      "chunk_id": 2,
+      "content": "**Arne Jacobsen (1902-1971):**\n*   Born in Copenhagen, he was an architect and furniture designer.\n*   From 1924, he studied architecture for three years at the Royal Danish Academy of Fine Arts under Professor Kay Fisker.\n*   He embraced the modernism of the German Bauhaus, a direction not immediately accepted in Denmark at the time.\n*   He won an award for a chair he exhibited at the 1925 Art Deco Exposition.\n*   He was involved in total design, covering architecture, interiors, furniture, lighting, and cutlery.\n*   He frequently used new materials like metal and synthetic resins, unlike many of his contemporaries in Denmark who focused on wood.\n*   He designed famous buildings like the SAS Royal Hotel in Copenhagen, for which he also designed the interiors and furnishings, including the Egg and Swan chairs.\n*   In the 1930s, he was involved in the comprehensive resort development of Bellevue Beach near Copenhagen, designing the Bellevue Theatre. For the theatre's attached restaurant, he arranged a version of a Chinese chair called the \"Bellevue Chair.\"\n*   Being of Jewish descent, he moved to Sweden during the German occupation in World War II.",
+      "content_length": 1165,
+      "page_headers_count": 1,
+      "page_headers": [
+        "text: \"2）アラン・ハンセン社の自信 ヤコブセンが生前に発表したデザインの中でも、われわれのよくなる製品は決して多くない。スワンやエッグの優位性は、そのデザインの斬新さやユニークさのデザインのみならず、当時、家具メーカーのフリッツ・ハンセン社の製品のなかでも、きわめてモダンな製品だったため、フリッツ・ハンセン社にとっても技術的にチャレンジングなものだった。 3）家具職人マイスターではなかった ヤコブセンが生涯で手がけたデザインの中で、もっとも有名な椅子のひとつ、セブンチェアは家具職人マイスターのつくる椅子にも似ていますが、木材に対しての深い造詣や素材についての知識があったからこそ誕生したデザインではない。 建築素材と同じレベルで木をデザインにいかしていることはあまりなかった。デザインのディテールに使ったり、色みをつけたり、あるいは表面材として用いるなどの使い方がほとんどである。ヤコブセンは、建築家でありデザイナーだった。木を自在にあやつる職人ではなかった。そのことが逆に、スワンやエッグのような、それまでの椅子にはなかった新しいデザインの可能性をひらくきっかけとなった。 （右） エッグチェア SASロイヤルホテルのために、スワンチェアと同時にデザインされた。卵の殻に似たフォルムは、体をすっぽりと包み、プライベートな空間をつくりだす。 （右） セブンチェア 1955年に発表。積層合板を三次元成形した最初の椅子。ヤコブセンのデザインの中でもっとも商業的に成功し、現在でも、フリッツ・ハンセン社のベストセラー。 （左） アリンコチェア 1952年に発表。「セブンチェア」の原型。デンマークの製薬会社、ノボ・ノルディスク社の社員食堂のためにデザインされた。当初は、家具メーカーのフリッツ・ハンセン社から、その急進的なデザインと製造の難しさから製品されるかどうかが危ぶまれたが、現在も製造されている。 なぜ、ヤコブセンはアントチェアやセブンチェアのような合板を使った椅子を生んだのか 家具素材の刷新と模索 アントチェア（1952年）は、成形合板が家具の世界で初めて採用した事例としてしばしば挙げられる。それまで、家具の素材といえば、無垢材や椅子張りなどが中心だったが、20世紀になってさまざまな素材が登場してきた。金属や新建材が台頭してきたことで、家具のデザインは飛躍てきにひろがった。 （右） スワンチェア 1958年に、コペンハーゲンのSASロイヤルホテルのためにエッグチェアとともに設計された。白鳥が羽を広げたような優美なフォルムと、直線を使わないデザインが特徴。フレームはシェル（硬質発泡ウレタン製）に、脚部はアルミのスターベースで構成される。 偉大な建築家を語る アルネ・ヤコブセン 1902～1971年 デンマークの建築家、家具デザイナー。1902年2月11日、コペンハーゲン生まれ。1924年にデンマーク王立芸術アカデミーに入学したが、その前に一度、石工職人としての教育を受けている。そのため、もとからの才能に、アカデミズムの洗練されたアートの感覚と実践的な技術者の視点がくわわった。1927～1930年、同大学建築学部で、カイ・フィスカーとカイ・ゴットロープのもとで学んだ。 アカデミーに入学する前、1925年のパリ万博（アール・デコ博）において、椅子を発表。銀メダルを獲得。この万博で、ル・コルビュジエやミース・ファン・デル・ローエの作品に注目。合理主義、モダニズムの建築に開眼する。 卒業後、市庁舎や劇場、オフィスビル、集合住宅など数々の建築設計に携わるかたわら、家具や照明、テキスタイルなどのデザインをてがけ、トータルデザインを実践。当時、流行のデンマークモダニズムを追求したほかの建築家とは異なり、早くから、インターナショナルなモダニズム建築に目を向けていた。1952年、背と座が一体となった成形合板の「アリンコチェア」を発表。 建築では「SASロイヤルホテル・コペンハーゲン」（現ラディソンSASロイヤルホテル、1960年）がもっとも有名。「スワンチェア」、「エッグチェア」（1958年）、「AJランプ」など、トータルに手がけた。1964年には、オックスフォード大学セント・キャサリンズ・カレッジを設計。家具やカトラリーなど、ホテルのインテリアパーツを設計する。ミッドセンチュリー期のデンマークを代表する世界的建築家のひとりである。1971年3月24日、心臓発作により死去。69歳だった。彼のスタジオは、ハンス・J・ウェグナーのスタジオで働いていたこともある。彼の右腕として活躍したテオドア・スコフとビゴ・ボーセンが引き継ぎ、代表作のデンマーク国立銀行の設計を完成させた。 (上) ヤコブセンの自邸であるスーホルムの集合住宅。このデザインはあまり知られていないが、1950年に設計されたもの。 233 20世紀の建築家たちの仕事\"\npage_span {\n  page_start: 1\n  page_end: 1\n}\n"
+      ],
+      "source_blocks": [
+        {
+          "source_block_id": "2"
+        }
+      ],
+      "element_bounding_boxes": [],
+      "preview": "**Arne Jacobsen (1902-1971):**\n*   Born in Copenhagen, he was an architect and furniture designer.\n*   From 1924, he studied architecture for three years at the Royal Danish Academy of Fine Arts under..."
+    },
+    {
+      "chunk_id": 3,
+      "content": "**Analysis of Jacobsen's Success:**\nThe text poses the question of how Jacobsen was able to create masterpieces like the Ant Chair and Egg Chair, offering three main reasons:\n1.  **Development and Use of New Materials:**\n    *   The Ant Chair was the world's first chair to use a single piece of 3D molded plywood for its seat and back.\n    *   The Egg Chair was the first chair to use molded hard foam (urethane).\n    *   The advancement of material research in the mid-20th century and his collaboration with the forward-thinking company Fritz Hansen were crucial.\n2.  **The Existence of Fritz Hansen:**\n    *   The company, founded in 1872, was essential in bringing Jacobsen's innovative designs to life.\n    *   Fritz Hansen collaborated with Jacobsen on the use of new materials and the development of new plywood technologies, which led to the creation of chairs like the Ant Chair.\n    *   These chairs became major hits, making Jacobsen a significant figure for Fritz Hansen's business as well.\n3.  **Not Being a Master Craftsman (in Furniture):**\n    *   The text suggests that traditional furniture master craftsmen might have dismissed Jacobsen's designs as impossible to produce based on their existing knowledge.\n    *   As an architect and designer, Jacobsen was free from preconceived notions, allowing him to create unprecedented designs. The text notes that this was, of course, also due to his exceptional talent.",
+      "content_length": 1432,
+      "page_headers_count": 1,
+      "page_headers": [
+        "text: \"2）アラン・ハンセン社の自信 ヤコブセンが生前に発表したデザインの中でも、われわれのよくなる製品は決して多くない。スワンやエッグの優位性は、そのデザインの斬新さやユニークさのデザインのみならず、当時、家具メーカーのフリッツ・ハンセン社の製品のなかでも、きわめてモダンな製品だったため、フリッツ・ハンセン社にとっても技術的にチャレンジングなものだった。 3）家具職人マイスターではなかった ヤコブセンが生涯で手がけたデザインの中で、もっとも有名な椅子のひとつ、セブンチェアは家具職人マイスターのつくる椅子にも似ていますが、木材に対しての深い造詣や素材についての知識があったからこそ誕生したデザインではない。 建築素材と同じレベルで木をデザインにいかしていることはあまりなかった。デザインのディテールに使ったり、色みをつけたり、あるいは表面材として用いるなどの使い方がほとんどである。ヤコブセンは、建築家でありデザイナーだった。木を自在にあやつる職人ではなかった。そのことが逆に、スワンやエッグのような、それまでの椅子にはなかった新しいデザインの可能性をひらくきっかけとなった。 （右） エッグチェア SASロイヤルホテルのために、スワンチェアと同時にデザインされた。卵の殻に似たフォルムは、体をすっぽりと包み、プライベートな空間をつくりだす。 （右） セブンチェア 1955年に発表。積層合板を三次元成形した最初の椅子。ヤコブセンのデザインの中でもっとも商業的に成功し、現在でも、フリッツ・ハンセン社のベストセラー。 （左） アリンコチェア 1952年に発表。「セブンチェア」の原型。デンマークの製薬会社、ノボ・ノルディスク社の社員食堂のためにデザインされた。当初は、家具メーカーのフリッツ・ハンセン社から、その急進的なデザインと製造の難しさから製品されるかどうかが危ぶまれたが、現在も製造されている。 なぜ、ヤコブセンはアントチェアやセブンチェアのような合板を使った椅子を生んだのか 家具素材の刷新と模索 アントチェア（1952年）は、成形合板が家具の世界で初めて採用した事例としてしばしば挙げられる。それまで、家具の素材といえば、無垢材や椅子張りなどが中心だったが、20世紀になってさまざまな素材が登場してきた。金属や新建材が台頭してきたことで、家具のデザインは飛躍てきにひろがった。 （右） スワンチェア 1958年に、コペンハーゲンのSASロイヤルホテルのためにエッグチェアとともに設計された。白鳥が羽を広げたような優美なフォルムと、直線を使わないデザインが特徴。フレームはシェル（硬質発泡ウレタン製）に、脚部はアルミのスターベースで構成される。 偉大な建築家を語る アルネ・ヤコブセン 1902～1971年 デンマークの建築家、家具デザイナー。1902年2月11日、コペンハーゲン生まれ。1924年にデンマーク王立芸術アカデミーに入学したが、その前に一度、石工職人としての教育を受けている。そのため、もとからの才能に、アカデミズムの洗練されたアートの感覚と実践的な技術者の視点がくわわった。1927～1930年、同大学建築学部で、カイ・フィスカーとカイ・ゴットロープのもとで学んだ。 アカデミーに入学する前、1925年のパリ万博（アール・デコ博）において、椅子を発表。銀メダルを獲得。この万博で、ル・コルビュジエやミース・ファン・デル・ローエの作品に注目。合理主義、モダニズムの建築に開眼する。 卒業後、市庁舎や劇場、オフィスビル、集合住宅など数々の建築設計に携わるかたわら、家具や照明、テキスタイルなどのデザインをてがけ、トータルデザインを実践。当時、流行のデンマークモダニズムを追求したほかの建築家とは異なり、早くから、インターナショナルなモダニズム建築に目を向けていた。1952年、背と座が一体となった成形合板の「アリンコチェア」を発表。 建築では「SASロイヤルホテル・コペンハーゲン」（現ラディソンSASロイヤルホテル、1960年）がもっとも有名。「スワンチェア」、「エッグチェア」（1958年）、「AJランプ」など、トータルに手がけた。1964年には、オックスフォード大学セント・キャサリンズ・カレッジを設計。家具やカトラリーなど、ホテルのインテリアパーツを設計する。ミッドセンチュリー期のデンマークを代表する世界的建築家のひとりである。1971年3月24日、心臓発作により死去。69歳だった。彼のスタジオは、ハンス・J・ウェグナーのスタジオで働いていたこともある。彼の右腕として活躍したテオドア・スコフとビゴ・ボーセンが引き継ぎ、代表作のデンマーク国立銀行の設計を完成させた。 (上) ヤコブセンの自邸であるスーホルムの集合住宅。このデザインはあまり知られていないが、1950年に設計されたもの。 233 20世紀の建築家たちの仕事\"\npage_span {\n  page_start: 1\n  page_end: 1\n}\n"
+      ],
+      "source_blocks": [
+        {
+          "source_block_id": "2"
+        }
+      ],
+      "element_bounding_boxes": [],
+      "preview": "**Analysis of Jacobsen's Success:**\nThe text poses the question of how Jacobsen was able to create masterpieces like the Ant Chair and Egg Chair, offering three main reasons:\n1.  **Development and Use..."
+    },
+    {
+      "chunk_id": 4,
+      "content": "**Details on the Chairs:**\n*   **Ant Chair (15-13):**\n    *   Designed in 1952.\n    *   Originally designed for the cafeteria of the pharmaceutical company Novo.\n    *   Features a seat and back made of beech plywood on steel pipe legs.\n    *   The name \"Ant\" comes from its overall form, which resembles the insect with its narrow \"waist.\"\n    *   Initially designed with 3 legs, it was changed to 4 legs after Jacobsen's death in 1971.\n*   **Series 7 (or Seven) Chair (15-14):**\n    *   Designed in 1955.\n    *   The seat and back are slightly larger and more relaxed compared to the Ant Chair.\n    *   It was also a major hit, and various versions, including some with armrests, exist.\n*   **Egg Chair (15-15):**\n    *   Designed in 1958.\n    *   The body is molded from urethane foam for the first time. The base is die-cast aluminum, consisting of a steel shaft and an aluminum base.\n    *   Designed for the lobby of the SAS Royal Hotel, which Jacobsen also designed.\n    *   Features a reclining function.\n*   **Swan Chair (15-16):**\n    *   Designed in 1958 for the SAS Royal Hotel.\n    *   Uses the same materials as the Egg Chair but is more compact and easier to handle.\n    *   Noted as a masterpiece for its unique design and material use.",
+      "content_length": 1252,
+      "page_headers_count": 1,
+      "page_headers": [
+        "text: \"2）アラン・ハンセン社の自信 ヤコブセンが生前に発表したデザインの中でも、われわれのよくなる製品は決して多くない。スワンやエッグの優位性は、そのデザインの斬新さやユニークさのデザインのみならず、当時、家具メーカーのフリッツ・ハンセン社の製品のなかでも、きわめてモダンな製品だったため、フリッツ・ハンセン社にとっても技術的にチャレンジングなものだった。 3）家具職人マイスターではなかった ヤコブセンが生涯で手がけたデザインの中で、もっとも有名な椅子のひとつ、セブンチェアは家具職人マイスターのつくる椅子にも似ていますが、木材に対しての深い造詣や素材についての知識があったからこそ誕生したデザインではない。 建築素材と同じレベルで木をデザインにいかしていることはあまりなかった。デザインのディテールに使ったり、色みをつけたり、あるいは表面材として用いるなどの使い方がほとんどである。ヤコブセンは、建築家でありデザイナーだった。木を自在にあやつる職人ではなかった。そのことが逆に、スワンやエッグのような、それまでの椅子にはなかった新しいデザインの可能性をひらくきっかけとなった。 （右） エッグチェア SASロイヤルホテルのために、スワンチェアと同時にデザインされた。卵の殻に似たフォルムは、体をすっぽりと包み、プライベートな空間をつくりだす。 （右） セブンチェア 1955年に発表。積層合板を三次元成形した最初の椅子。ヤコブセンのデザインの中でもっとも商業的に成功し、現在でも、フリッツ・ハンセン社のベストセラー。 （左） アリンコチェア 1952年に発表。「セブンチェア」の原型。デンマークの製薬会社、ノボ・ノルディスク社の社員食堂のためにデザインされた。当初は、家具メーカーのフリッツ・ハンセン社から、その急進的なデザインと製造の難しさから製品されるかどうかが危ぶまれたが、現在も製造されている。 なぜ、ヤコブセンはアントチェアやセブンチェアのような合板を使った椅子を生んだのか 家具素材の刷新と模索 アントチェア（1952年）は、成形合板が家具の世界で初めて採用した事例としてしばしば挙げられる。それまで、家具の素材といえば、無垢材や椅子張りなどが中心だったが、20世紀になってさまざまな素材が登場してきた。金属や新建材が台頭してきたことで、家具のデザインは飛躍てきにひろがった。 （右） スワンチェア 1958年に、コペンハーゲンのSASロイヤルホテルのためにエッグチェアとともに設計された。白鳥が羽を広げたような優美なフォルムと、直線を使わないデザインが特徴。フレームはシェル（硬質発泡ウレタン製）に、脚部はアルミのスターベースで構成される。 偉大な建築家を語る アルネ・ヤコブセン 1902～1971年 デンマークの建築家、家具デザイナー。1902年2月11日、コペンハーゲン生まれ。1924年にデンマーク王立芸術アカデミーに入学したが、その前に一度、石工職人としての教育を受けている。そのため、もとからの才能に、アカデミズムの洗練されたアートの感覚と実践的な技術者の視点がくわわった。1927～1930年、同大学建築学部で、カイ・フィスカーとカイ・ゴットロープのもとで学んだ。 アカデミーに入学する前、1925年のパリ万博（アール・デコ博）において、椅子を発表。銀メダルを獲得。この万博で、ル・コルビュジエやミース・ファン・デル・ローエの作品に注目。合理主義、モダニズムの建築に開眼する。 卒業後、市庁舎や劇場、オフィスビル、集合住宅など数々の建築設計に携わるかたわら、家具や照明、テキスタイルなどのデザインをてがけ、トータルデザインを実践。当時、流行のデンマークモダニズムを追求したほかの建築家とは異なり、早くから、インターナショナルなモダニズム建築に目を向けていた。1952年、背と座が一体となった成形合板の「アリンコチェア」を発表。 建築では「SASロイヤルホテル・コペンハーゲン」（現ラディソンSASロイヤルホテル、1960年）がもっとも有名。「スワンチェア」、「エッグチェア」（1958年）、「AJランプ」など、トータルに手がけた。1964年には、オックスフォード大学セント・キャサリンズ・カレッジを設計。家具やカトラリーなど、ホテルのインテリアパーツを設計する。ミッドセンチュリー期のデンマークを代表する世界的建築家のひとりである。1971年3月24日、心臓発作により死去。69歳だった。彼のスタジオは、ハンス・J・ウェグナーのスタジオで働いていたこともある。彼の右腕として活躍したテオドア・スコフとビゴ・ボーセンが引き継ぎ、代表作のデンマーク国立銀行の設計を完成させた。 (上) ヤコブセンの自邸であるスーホルムの集合住宅。このデザインはあまり知られていないが、1950年に設計されたもの。 233 20世紀の建築家たちの仕事\"\npage_span {\n  page_start: 1\n  page_end: 1\n}\n"
+      ],
+      "source_blocks": [
+        {
+          "source_block_id": "2"
+        }
+      ],
+      "element_bounding_boxes": [],
+      "preview": "**Details on the Chairs:**\n*   **Ant Chair (15-13):**\n    *   Designed in 1952.\n    *   Originally designed for the cafeteria of the pharmaceutical company Novo.\n    *   Features a seat and back made ..."
+    }
+  ],
+  "total_chunked_text_length": 5125,
+  "images_detail": [],
+  "pages_detail": [
+    {
+      "page_id": 1,
+      "page_number": 1,
+      "has_blocks": false,
+      "blocks_count": 0,
+      "has_paragraphs": false,
+      "paragraphs_count": 0,
+      "has_lines": false,
+      "lines_count": 0,
+      "has_tables": false,
+      "tables_count": 0
+    }
+  ],
+  "v1beta3_features_summary": {
+    "returnImages_detected": false,
+    "returnBoundingBoxes_detected": false,
+    "enableImageAnnotation_active": false,
+    "enableTableAnnotation_active": false,
+    "enableLlmLayoutParsing_active": true
+  },
+  "analysis_results": {
+    "pages_data": [
+      {
+        "page": 1,
+        "coordinates": [],
+        "visual_elements": [],
+        "image_data": {
+          "has_content": true,
+          "content_size": 1310894,
+          "mime_type": "",
+          "width": 2379,
+          "height": 3361,
+          "saved_file": "extracted_images/layout_parser_page_1.png",
+          "file_saved": true
+        },
+        "raw_elements_count": {
+          "blocks": 0,
+          "paragraphs": 0,
+          "lines": 0,
+          "tokens": 0
+        }
+      }
+    ],
+    "document_layout_analysis": {
+      "blocks_count": 2,
+      "blocks_with_coordinates": [
+        {
+          "block_id": 1,
+          "text": "2）アラン・ハンセン社の自信 ヤコブセンが生前に発表したデザインの中でも、われわれのよくなる製品は決して多くない。スワンやエッグの優位性は、そのデザインの斬新さやユニークさのデザインのみならず、当時、家具メーカーのフリッツ・ハンセン社の製品のなかでも、きわめてモダンな製品だったため、フリッツ・ハンセン社にとっても技術的にチャレンジングなものだった。 3）家具職人マイスターではなかった ヤコブセンが生涯で手がけたデザインの中で、もっとも有名な椅子のひとつ、セブンチェアは家具職人マイスターのつくる椅子にも似ていますが、木材に対しての深い造詣や素材についての知識があったからこそ誕生したデザインではない。 建築素材と同じレベルで木をデザインにいかしていることはあまりなかった。デザインのディテールに使ったり、色みをつけたり、あるいは表面材として用いるなどの使い方がほとんどである。ヤコブセンは、建築家でありデザイナーだった。木を自在にあやつる職人ではなかった。そのことが逆に、スワンやエッグのような、それまでの椅子にはなかった新しいデザインの可能性をひらくきっかけとなった。 （右） エッグチェア SASロイヤルホテルのために、スワンチェアと同時にデザインされた。卵の殻に似たフォルムは、体をすっぽりと包み、プライベートな空間をつくりだす。 （右） セブンチェア 1955年に発表。積層合板を三次元成形した最初の椅子。ヤコブセンのデザインの中でもっとも商業的に成功し、現在でも、フリッツ・ハンセン社のベストセラー。 （左） アリンコチェア 1952年に発表。「セブンチェア」の原型。デンマークの製薬会社、ノボ・ノルディスク社の社員食堂のためにデザインされた。当初は、家具メーカーのフリッツ・ハンセン社から、その急進的なデザインと製造の難しさから製品されるかどうかが危ぶまれたが、現在も製造されている。 なぜ、ヤコブセンはアントチェアやセブンチェアのような合板を使った椅子を生んだのか 家具素材の刷新と模索 アントチェア（1952年）は、成形合板が家具の世界で初めて採用した事例としてしばしば挙げられる。それまで、家具の素材といえば、無垢材や椅子張りなどが中心だったが、20世紀になってさまざまな素材が登場してきた。金属や新建材が台頭してきたことで、家具のデザインは飛躍てきにひろがった。 （右） スワンチェア 1958年に、コペンハーゲンのSASロイヤルホテルのためにエッグチェアとともに設計された。白鳥が羽を広げたような優美なフォルムと、直線を使わないデザインが特徴。フレームはシェル（硬質発泡ウレタン製）に、脚部はアルミのスターベースで構成される。 偉大な建築家を語る アルネ・ヤコブセン 1902～1971年 デンマークの建築家、家具デザイナー。1902年2月11日、コペンハーゲン生まれ。1924年にデンマーク王立芸術アカデミーに入学したが、その前に一度、石工職人としての教育を受けている。そのため、もとからの才能に、アカデミズムの洗練されたアートの感覚と実践的な技術者の視点がくわわった。1927～1930年、同大学建築学部で、カイ・フィスカーとカイ・ゴットロープのもとで学んだ。 アカデミーに入学する前、1925年のパリ万博（アール・デコ博）において、椅子を発表。銀メダルを獲得。この万博で、ル・コルビュジエやミース・ファン・デル・ローエの作品に注目。合理主義、モダニズムの建築に開眼する。 卒業後、市庁舎や劇場、オフィスビル、集合住宅など数々の建築設計に携わるかたわら、家具や照明、テキスタイルなどのデザインをてがけ、トータルデザインを実践。当時、流行のデンマークモダニズムを追求したほかの建築家とは異なり、早くから、インターナショナルなモダニズム建築に目を向けていた。1952年、背と座が一体となった成形合板の「アリンコチェア」を発表。 建築では「SASロイヤルホテル・コペンハーゲン」（現ラディソンSASロイヤルホテル、1960年）がもっとも有名。「スワンチェア」、「エッグチェア」（1958年）、「AJランプ」など、トータルに手がけた。1964年には、オックスフォード大学セント・キャサリンズ・カレッジを設計。家具やカトラリーなど、ホテルのインテリアパーツを設計する。ミッドセンチュリー期のデンマークを代表する世界的建築家のひとりである。1971年3月24日、心臓発作により死去。69歳だった。彼のスタジオは、ハンス・J・ウェグナーのスタジオで働いていたこともある。彼の右腕として活躍したテオドア・スコフとビゴ・ボーセンが引き継ぎ、代表作のデンマーク国立銀行の設計を完成させた。 (上) ヤコブセンの自邸であるスーホルムの集合住宅。このデザインはあまり知られていないが、1950年に設計されたもの。 233 20世紀の建築家たちの仕事",
+          "coordinates": [],
+          "page_anchor_info": {},
+          "layout_info": {},
+          "bounding_box_info": {
+            "has_bounding_box": false
+          }
+        },
+        {
+          "block_id": 2,
+          "text": "",
+          "coordinates": [
+            {
+              "source": "bounding_box.normalized_vertices",
+              "coordinates": [
+                {
+                  "x": 0.12694409489631653,
+                  "y": 0.08479619026184082
+                },
+                {
+                  "x": 0.12694409489631653,
+                  "y": 0.4656352400779724
+                },
+                {
+                  "x": 0.883144199848175,
+                  "y": 0.4656352400779724
+                },
+                {
+                  "x": 0.883144199848175,
+                  "y": 0.08479619026184082
+                }
+              ],
+              "count": 4
+            }
+          ],
+          "page_anchor_info": {},
+          "layout_info": {},
+          "bounding_box_info": {
+            "has_bounding_box": true,
+            "attributes": [
+              "normalized_vertices",
+              "vertices"
+            ],
+            "data": {
+              "normalized_vertices": "[x: 0.126944095\ny: 0.0847961903\n, x: 0.126944095\ny: 0.46563524\n, x: 0.8831442\ny: 0.46563524\n, x: 0.8",
+              "vertices": "[]"
+            }
+          }
+        }
+      ]
+    },
+    "summary": {
+      "total_coordinates": 4,
+      "total_visual_elements": 0,
+      "total_images": 1,
+      "coordinate_extraction_success": true,
+      "visual_elements_extraction_success": false,
+      "image_extraction_success": true
+    }
+  },
+  "individual_images": {
+    "total_extracted": 1,
+    "extraction_success": true,
+    "figures_details": [
+      {
+        "figure_id": 1,
+        "block_index": 2,
+        "coordinates": {
+          "left": 302,
+          "top": 284,
+          "right": 2101,
+          "bottom": 1565
+        },
+        "size": {
+          "width": 1799,
+          "height": 1281
+        },
+        "coordinate_source": "bounding_box.normalized_vertices",
+        "saved_path": "extracted_figures/figure_page1_1.png"
+      }
+    ]
+  },
+  "image_block_investigation": {
+    "blocks_with_image_block": 1,
+    "investigation_success": true,
+    "detailed_findings": [
+      {
+        "block_index": 2,
+        "has_image_block": true,
+        "image_block_attributes": [
+          "annotations",
+          "blob_asset_id",
+          "data_uri",
+          "gcs_uri",
+          "image_text",
+          "mime_type"
+        ],
+        "image_block_data": {
+          "annotations": "description: \"This is a text-based image, specifically a page from a book or magazine written in Japanese. The content focuses on the Danish architect and furniture designer, Arne Jacobsen, and his ic",
+          "blob_asset_id": "blob_1",
+          "data_uri": "",
+          "gcs_uri": "",
+          "image_text": "string_length_1908",
+          "mime_type": "image/png",
+          "extracted_image_path": "extracted_images/image_block_2_blob_1.png",
+          "extracted_image_size": 306883
+        },
+        "coordinates_found": [
+          {
+            "source": "block.bounding_box.normalized_vertices",
+            "coordinates": [
+              [
+                0.12694409489631653,
+                0.08479619026184082
+              ],
+              [
+                0.12694409489631653,
+                0.4656352400779724
+              ],
+              [
+                0.883144199848175,
+                0.4656352400779724
+              ],
+              [
+                0.883144199848175,
+                0.08479619026184082
+              ]
+            ]
+          }
+        ],
+        "block_type": "unknown",
+        "coordinate_count": 1
+      }
+    ]
+  },
+  "layout_coordinates_investigation": {
+    "total_coordinate_sets": 1,
+    "coordinate_extraction_success": true,
+    "coordinate_sources": [
+      {
+        "source": "block_2.bounding_box.normalized_vertices",
+        "coordinates": [
+          {
+            "x": 0.12694409489631653,
+            "y": 0.08479619026184082
+          },
+          {
+            "x": 0.12694409489631653,
+            "y": 0.4656352400779724
+          },
+          {
+            "x": 0.883144199848175,
+            "y": 0.4656352400779724
+          },
+          {
+            "x": 0.883144199848175,
+            "y": 0.08479619026184082
+          }
+        ]
+      }
+    ]
+  }
+}

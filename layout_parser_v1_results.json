@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-02-09 21:18:27",
+  "api_version": "documentai_v1",
+  "processor_info": {
+    "type": "Layout Parser",
+    "processor_id": "6af87434352688a1"
+  },
+  "pages_data": [],
+  "extracted_figures": [],
+  "summary": {
+    "total_pages": 0,
+    "total_paragraphs": 0,
+    "total_lines": 0,
+    "total_tokens": 0,
+    "total_visual_elements": 0,
+    "total_figures": 0,
+    "coordinates_found": 0,
+    "images_saved": 0
+  }
+}
