@@ -1,0 +1,41 @@
+{
+  "input_file": "sample4.png",
+  "results": {
+    "text_extraction": {
+      "source": "document_layout.blocks",
+      "total_blocks": 1,
+      "text_blocks": 1,
+      "total_chars": 15,
+      "texts": [
+        "Sample Document"
+      ]
+    },
+    "image_extraction": {
+      "page_1": {
+        "filename": "extracted_images/simple_test_page_1.png",
+        "size_bytes": 86770
+      }
+    },
+    "structure_analysis": {
+      "total_pages": 1,
+      "image_blocks_found": 0,
+      "chunks": 1
+    },
+    "chunking_analysis": {
+      "total_chunks": 1,
+      "chunk_texts": [
+        "# Sample Document\n\n## Heading 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et maximus nibh. Quisque sit amet purus nec lacus pulvinar congue. Nulla pulvinar neque ac vulputate pharetra. Vivamus ut odio porttitor, iaculis arcu quis, pellentesque libero. Maecenas pretium vulputate nulla. Integer nec efficitur libero. Aenean vestibulum convallis placerat. Phasellus lobortis leo a consectetur eleifend."
+      ],
+      "total_chunked_chars": 424
+    }
+  },
+  "summary": {
+    "text_blocks": 1,
+    "block_chars": 15,
+    "chunk_count": 1,
+    "chunk_chars": 424,
+    "images_extracted": 1,
+    "total_pages": 1,
+    "image_blocks": 0
+  }
+}

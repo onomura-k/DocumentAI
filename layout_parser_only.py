@@ -7,6 +7,9 @@ import os
 import json
 import io
 from PIL import Image
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import A4
+import tempfile
 from google.cloud import documentai_v1beta3 as documentai
 
 class LayoutParserTest:
@@ -17,7 +20,7 @@ class LayoutParserTest:
             "project_id": "gen-lang-client-0849825641",
             "documentai_location": "us",
             "layout_parser_processor_id": "6af87434352688a1",
-            "pdf_path": "sample.pdf"
+            "image_path": "sample4.png"
         }
         
         # Document AI クライアント初期化
@@ -29,6 +32,57 @@ class LayoutParserTest:
             self.config['documentai_location'], 
             self.config['layout_parser_processor_id']
         )
+        
+    def convert_jpg_to_pdf(self, jpg_path: str) -> str:
+        """JPG画像をPDFに変換してLayout Parserで処理可能にする"""
+        try:
+            # 画像を開く
+            img = Image.open(jpg_path)
+            
+            # 一時PDFファイルを作成
+            temp_pdf = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
+            temp_pdf_path = temp_pdf.name
+            temp_pdf.close()
+            
+            # 画像サイズを取得
+            img_width, img_height = img.size
+            
+            # PDFのページサイズを計算（A4比率を保持）
+            pdf_width, pdf_height = A4
+            
+            # 画像の縦横比を保持してPDFにフィット
+            img_ratio = img_width / img_height
+            pdf_ratio = pdf_width / pdf_height
+            
+            if img_ratio > pdf_ratio:
+                # 横長画像：幅をPDFの幅に合わせる
+                display_width = pdf_width
+                display_height = pdf_width / img_ratio
+            else:
+                # 縦長画像：高さをPDFの高さに合わせる
+                display_height = pdf_height
+                display_width = pdf_height * img_ratio
+            
+            # PDFを生成
+            c = canvas.Canvas(temp_pdf_path, pagesize=A4)
+            
+            # 画像を中央配置で描画
+            x_offset = (pdf_width - display_width) / 2
+            y_offset = (pdf_height - display_height) / 2
+            
+            c.drawImage(jpg_path, x_offset, y_offset, 
+                       width=display_width, height=display_height)
+            c.save()
+            
+            print(f"✅ JPG→PDF変換完了: {jpg_path} → {temp_pdf_path}")
+            print(f"   画像サイズ: {img_width}x{img_height}px")
+            print(f"   PDF表示サイズ: {display_width:.1f}x{display_height:.1f}pt")
+            
+            return temp_pdf_path
+            
+        except Exception as e:
+            print(f"❌ JPG→PDF変換エラー: {e}")
+            return None
         
     def get_process_options(self):
         """公式リファレンス準拠の正しいLayoutConfig設定"""
@@ -47,7 +101,7 @@ class LayoutParserTest:
                 return_bounding_boxes=True,      # 📋 公式: 座標データ(バウンディングボックス)を返却
                 
                 # 3. 解析・抽出の有効化
-                enable_llm_layout_parsing=True,  # LLMによる解析
+                enable_llm_layout_parsing=False,  # LLMによる解析
                 enable_image_extraction=True,   # 画像抽出
                 enable_image_annotation=True,   # 画像注釈（座標強化）
                 enable_table_annotation=True    # 表の解析
@@ -289,11 +343,19 @@ class LayoutParserTest:
         print("=" * 50)
         
         try:
-            # PDFファイル読み込み
-            with open(self.config["pdf_path"], "rb") as f:
+            # JPG画像をPDFに変換
+            original_image_path = self.config["image_path"]
+            temp_pdf_path = self.convert_jpg_to_pdf(original_image_path)
+            
+            if not temp_pdf_path:
+                print("❌ JPG→PDF変換に失敗しました")
+                return
+            
+            # 変換されたPDFファイルを読み込み
+            with open(temp_pdf_path, "rb") as f:
                 pdf_content = f.read()
             
-            print(f"📁 PDF読み込み: {self.config['pdf_path']} ({len(pdf_content)} bytes)")
+            print(f"📁 変換PDF読み込み: {temp_pdf_path} ({len(pdf_content)} bytes)")
             
             # プロセッサ情報を事前確認
             self._check_processor_info()
@@ -366,8 +428,23 @@ class LayoutParserTest:
             
             self._save_detailed_results(document, extracted_figures, image_block_findings, layout_coordinates)
             
+            # 一時PDFファイルをクリーンアップ
+            try:
+                if temp_pdf_path and os.path.exists(temp_pdf_path):
+                    os.unlink(temp_pdf_path)
+                    print(f"🧹 一時ファイル削除: {temp_pdf_path}")
+            except Exception as cleanup_e:
+                print(f"⚠️ 一時ファイル削除エラー: {cleanup_e}")
+            
         except Exception as e:
             print(f"❌ Layout Parserエラー: {e}")
+            # エラー時にも一時ファイルをクリーンアップ
+            try:
+                if 'temp_pdf_path' in locals() and temp_pdf_path and os.path.exists(temp_pdf_path):
+                    os.unlink(temp_pdf_path)
+                    print(f"🧹 エラー時一時ファイル削除: {temp_pdf_path}")
+            except Exception:
+                pass
     
     def _analyze_correct_field_references(self, document):
         """適切なフィールド参照による詳細調査 - page_anchor を使った正しい座標取得"""
